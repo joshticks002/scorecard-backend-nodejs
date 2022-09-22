@@ -356,7 +356,6 @@ const getScoresByName = asyncHandler(async (req, res) => {
         res.status(400);
         throw new Error("Student does not exist");
     }
-    console.log(getStudentScores[0].grades);
     res.status(201).json({
         message: "Student grades",
         scores: getStudentScores[0].grades,
@@ -377,7 +376,6 @@ const getUserCummulatives = asyncHandler(async (req, res) => {
         grades: user.grades,
         cummulatives,
     };
-    console.log(data);
     return res.status(200).json({ data });
 });
 const updateUserPasword = asyncHandler(async (req, res) => {

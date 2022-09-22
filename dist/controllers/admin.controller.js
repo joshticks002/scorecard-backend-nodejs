@@ -137,7 +137,6 @@ const logoutAdmin = asyncHandler(async (req, res) => {
 });
 const adminProfileImage = asyncHandler(async (req, res) => {
     var _a, _b;
-    console.log("got to route");
     if (req.file === undefined) {
         console.log("got undefined file");
         res.status(401);
