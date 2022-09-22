@@ -9,7 +9,6 @@ async function addAdmin(admin: IAdmin) {
 //view all admin
 async function viewAdminDetails() {
   const allAdmins = await Admin.find();
-  console.log(allAdmins);
   return allAdmins;
 }
 
@@ -35,7 +34,6 @@ async function editAdmin(adminid: string, admin: IAdmin) {
   const newAdmin = await Admin.findByIdAndUpdate(adminid, {
     $set: admin
   });
-  console.log(newAdmin + JSON.stringify(admin) + "good");
   return newAdmin ? newAdmin : null;
 }
 

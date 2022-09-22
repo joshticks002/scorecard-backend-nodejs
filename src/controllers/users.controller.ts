@@ -459,7 +459,7 @@ const getScoresByName = asyncHandler(async (req: Request, res: Response) => {
     res.status(400);
     throw new Error("Student does not exist");
   }
-  console.log(getStudentScores[0].grades);
+ 
   res.status(201).json({
     message: "Student grades",
     scores: getStudentScores[0].grades,
@@ -481,7 +481,7 @@ const getUserCummulatives = asyncHandler(
       grades: user.grades,
       cummulatives,
     };
-    console.log(data);
+    
     return res.status(200).json({ data });
   }
 );
@@ -568,8 +568,7 @@ const resetUserPass = asyncHandler(async (req: Request, res: Response) => {
     res.status(400);
     throw new Error("Passwords do not match");
   }
-
-  try {
+ try {
     if (process.env.JWT_SECRET) {
       await jwt.verify(ticket, process.env.JWT_SECRET);
 

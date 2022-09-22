@@ -18,7 +18,7 @@ const {
 } = require("../services/stack.service");
 const Admin = require("../models/admin.model");
 const Devs = require("../models/user.model");
-import express, { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 
 // const toId = mongoose.Schema.types.ObjectId
 const stacksShield = asyncHandler(
